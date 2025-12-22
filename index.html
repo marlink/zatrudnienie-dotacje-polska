@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zatrudnienie polska 2006 - Zaawansowany Kalkulator</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* Specific page overrides/additions */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .logo {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav class="glass">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="calculator"></i>
+                    </div>
+                    <span>zatrudnienie<span style="color:var(--primary)">polska</span> 2006</span>
+                </div>
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="#"><i data-lucide="home"></i> Strona główna</a></li>
+                    <li class="nav-link active"><a href="#"><i data-lucide="layout-grid"></i> Kalkulator</a></li>
+                    <li class="nav-link"><a href="#"><i data-lucide="briefcase"></i> Dotacje</a></li>
+                    <li class="nav-link"><a href="#"><i data-lucide="info"></i> Informacje</a></li>
+                </ul>
+                <button class="preset-btn active"
+                    style="padding: 0.75rem 1.5rem; background: var(--secondary); color: white;">Kontakt</button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="badge animate-fade-in" style="animation-delay: 0.1s">
+                <span class="badge-dot"></span> Aktualne na 2025 rok
+            </div>
+            <h1 class="animate-fade-in" style="animation-delay: 0.2s">Twoje finanse pod kontrolą.</h1>
+            <p class="animate-fade-in" style="animation-delay: 0.3s">Zaawansowany kalkulator form zatrudnienia. Porównaj
+                koszty, podatki i profity w czasie rzeczywistym.</p>
+
+            <div class="hero-cards">
+                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.4s">
+                    <i data-lucide="layers"></i>
+                    <h3>4 Formy</h3>
+                    <p style="font-size: 0.85rem">UoP, UZ, UOD, B2B</p>
+                </div>
+                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.5s">
+                    <i data-lucide="trending-up"></i>
+                    <h3>Optymalizacja</h3>
+                    <p style="font-size: 0.85rem">Najlepsza stawka netto</p>
+                </div>
+                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.6s">
+                    <i data-lucide="shield-check"></i>
+                    <h3>Bezpieczeństwo</h3>
+                    <p style="font-size: 0.85rem">Zgodność z przepisami</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content container">
+        <div class="calc-container animate-fade-in" style="animation-delay: 0.7s">
+            <div class="calc-header">
+                <div class="calc-title">
+                    <h2>Kalkulator Wynagrodzeń</h2>
+                    <p>Porównaj rzeczywiste koszty i zarobki dla różnych umów.</p>
+                </div>
+                <div style="display: flex; gap: 0.5rem">
+                    <button class="preset-btn" id="resetBtn"><i data-lucide="rotate-ccw"
+                            style="width:14px; height:14px; margin-right:4px"></i> Resetuj</button>
+                    <button class="preset-btn"
+                        style="background:var(--primary); border-color:var(--primary); color:white"><i
+                            data-lucide="download" style="width:14px; height:14px; margin-right:4px"></i> Eksportuj
+                        PDF</button>
+                </div>
+            </div>
+
+            <div class="input-grid">
+                <div class="input-field">
+                    <label for="grossInput">Wynagrodzenie brutto (m-c)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="grossInput" value="5000" placeholder="0.00">
+                        <span class="currency-symbol">PLN</span>
+                    </div>
+                    <div class="presets">
+                        <button class="preset-btn" data-value="3000">3 000 zł</button>
+                        <button class="preset-btn active" data-value="5000">5 000 zł</button>
+                        <button class="preset-btn" data-value="8000">8 000 zł</button>
+                        <button class="preset-btn" data-value="12000">12 000 zł</button>
+                        <button class="preset-btn" data-value="15000">15 000 zł</button>
+                        <button class="preset-btn" data-value="20000">20 000 zł</button>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="hoursInput">Wymiar godzin</label>
+                    <select id="hoursInput">
+                        <option value="168">Pełny etat (168h/mc)</option>
+                        <option value="147">Średnia (147h/mc)</option>
+                        <option value="84">1/2 etatu (84h/mc)</option>
+                        <option value="42">1/4 etatu (42h/mc)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="options-bar">
+                <div class="switch-group">
+                    <label class="switch">
+                        <input type="checkbox" id="taxFreeCheck" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span style="font-weight:600; font-size: 0.9rem">Uwzględnij kwotę wolną od podatku</span>
+                </div>
+                <div class="switch-group">
+                    <label class="switch">
+                        <input type="checkbox" id="youngPersonCheck">
+                        <span class="slider"></span>
+                    </label>
+                    <span style="font-weight:600; font-size: 0.9rem">Osoba poniżej 26 roku życia</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Forma zatrudnienia</th>
+                            <th>Stawka Netto /h</th>
+                            <th>Koszt Pracodawcy</th>
+                            <th>Podatki i Składki</th>
+                            <th>Benefity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTable">
+                        <!-- Content generated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="summary-grid">
+                <div class="summary-card">
+                    <h3>Najwyższa stawka netto</h3>
+                    <div class="value" id="bestNetValue">0 zł</div>
+                    <div class="label" id="bestNetLabel">-</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Najniższy koszt pracodawcy</h3>
+                    <div class="value" id="bestCostValue">0 zł</div>
+                    <div class="label" id="bestCostLabel">-</div>
+                </div>
+                <div class="summary-card">
+                    <h3>Najlepsze benefity</h3>
+                    <div class="value" id="bestBenefitsValue">0/4</div>
+                    <div class="label" id="bestBenefitsLabel">-</div>
+                </div>
+            </div>
+        </div>
+
+        <section id="key-info" class="animate-fade-in" style="animation-delay: 0.8s">
+            <div style="text-align: center; margin-bottom: 3rem">
+                <h2 style="font-size: 2.25rem; color: var(--secondary)">Kluczowe informacje</h2>
+                <p style="color: var(--text-muted)">Poznaj różnice między formami zatrudnienia w 2025.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem">
+                <div class="hero-card glass"
+                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
+                    <div
+                        style="width: 48px; height: 48px; background: #dcfce7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
+                        <i data-lucide="briefcase" style="color: var(--primary); margin-bottom: 0"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem">Umowa o pracę</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Najwyższy poziom
+                        ochrony prawnej i benefitów. Idealna dla długoterminowej współpracy i stabilności.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--primary)"></i> Pełny pakiet ZUS</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--primary)"></i> Płatny urlop i chorobowe</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--primary)"></i> Ochrona przed zwolnieniem</li>
+                    </ul>
+                </div>
+                <div class="hero-card glass"
+                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
+                    <div
+                        style="width: 48px; height: 48px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
+                        <i data-lucide="file-text" style="color: #2563eb; margin-bottom: 0"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem">Umowa zlecenie</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Elastyczność z
+                        zachowaniem podstawowych zabezpieczeń społecznych. Popularna wśród studentów.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:#2563eb"></i> Elastyczne godziny pracy</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:#2563eb"></i> ZUS jak przy etacie (częściowo)</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:#2563eb"></i> Brak sztywnej ochrony KP</li>
+                    </ul>
+                </div>
+                <div class="hero-card glass"
+                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
+                    <div
+                        style="width: 48px; height: 48px; background: #fef3c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
+                        <i data-lucide="building-2" style="color: var(--accent); margin-bottom: 0"></i>
+                    </div>
+                    <h3 style="margin-bottom: 1rem">B2B (Działalność)</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Najwyższa stawka
+                        netto, ale wymagana własna działalność gospodarcza i samodzielne rozliczenia.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--accent)"></i> Ulgi ZUS dla nowych firm</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--accent)"></i> Pełna elastyczność i koszty</li>
+                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
+                                style="width:16px; color:var(--accent)"></i> Wyższe zarobki netto</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <div class="logo" style="color: white; margin-bottom: 1.5rem">
+                    <div class="logo-icon">
+                        <i data-lucide="calculator"></i>
+                    </div>
+                    <span>zatrudnienie<span style="color:var(--primary)">polska</span></span>
+                </div>
+                <p>Niezależny portal dostarczający najdokładniejsze dane o rynku pracy w Polsce. Nasza misja to
+                    transparentność płac i pomoc w podejmowaniu świadomych decyzji zawodowych.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#">Poznaj rynek</a></li>
+                    <li><a href="#">Kalkulator</a></li>
+                    <li><a href="#">Dotacje 2025</a></li>
+                    <li><a href="#">Wiadomości</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Polityka prywatności</a></li>
+                    <li><a href="#">Regulamin</a></li>
+                    <li><a href="#">Dane podatkowe</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container"
+            style="border-top: 1px solid #1e293b; margin-top: 4rem; padding-top: 2rem; text-align: center; color: #64748b; font-size: 0.85rem">
+            &copy; 2025 zatrudnienie polska 2006. Wszelkie prawa zastrzeżone. Projektowany dla profesjonalistów.
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons (wrapped in try-catch for test environments)
+        try {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        } catch (e) {
+            console.warn('Lucide icons failed to load:', e);
+        }
+
+        // Constants and Rules 2025 (Estimates)
+        const RULES = {
+            UoP: {
+                zus: 0.1371, // Emerytalna, rentowa, chorobowa
+                health: 0.09,
+                tax: 0.12,
+                taxThreshold: 120000,
+                taxFree: 30000,
+                employerZus: 0.2048,
+                benefits: ['Urlop', 'Chorobowe', 'Staż pracy']
+            },
+            UZ: {
+                zus: 0.1126,
+                health: 0.09,
+                tax: 0.12,
+                taxFree: 30000,
+                employerZus: 0.2048,
+                benefits: ['ZUS em/ren', 'NFZ']
+            },
+            UOD: {
+                zus: 0,
+                health: 0,
+                tax: 0.12,
+                costOfIncome: 0.20, // 20% koszty uzyskania przychodu
+                benefits: []
+            },
+            B2B: {
+                zus: 1600, // Stałe składki ryczałtowe (uproszczenie)
+                health: 400,
+                tax: 0.12, // Ryczałt avg
+                benefits: ['Faktura', 'Koszty']
+            }
+        };
+
+        const grossInput = document.getElementById('grossInput');
+        const hoursInput = document.getElementById('hoursInput');
+        const resultsTable = document.getElementById('resultsTable');
+        const taxFreeCheck = document.getElementById('taxFreeCheck');
+        const youngPersonCheck = document.getElementById('youngPersonCheck');
+
+        function formatCurrency(val) {
+            return val.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " zł";
+        }
+
+        function calculate() {
+            const gross = parseFloat(grossInput.value) || 0;
+            const hours = parseInt(hoursInput.value) || 168;
+            const useTaxFree = taxFreeCheck.checked;
+            const isYoung = youngPersonCheck.checked;
+
+            const forms = [
+                { id: 'uop', name: 'Umowa o pracę', type: 'UoP' },
+                { id: 'uz', name: 'Umowa zlecenie', type: 'UZ' },
+                { id: 'uod', name: 'Umowa o dzieło', type: 'UOD' },
+                { id: 'b2b', name: 'B2B (Ryczałt 12%)', type: 'B2B' }
+            ];
+
+            let html = '';
+            let data = [];
+
+            forms.forEach(form => {
+                let net = 0;
+                let cost = 0;
+                let taxes = 0;
+                let benefits = RULES[form.type].benefits;
+
+                if (form.type === 'UoP') {
+                    const zusVal = gross * RULES.UoP.zus;
+                    const healthVal = (gross - zusVal) * RULES.UoP.health;
+                    let taxVal = 0;
+
+                    if (!isYoung) {
+                        const taxable = Math.max(0, gross - zusVal - (useTaxFree ? RULES.UoP.taxFree / 12 : 0));
+                        taxVal = taxable * RULES.UoP.tax;
+                    }
+
+                    net = gross - zusVal - healthVal - taxVal;
+                    cost = gross * (1 + RULES.UoP.employerZus);
+                    taxes = gross - net;
+                }
+                else if (form.type === 'UZ') {
+                    const zusVal = gross * RULES.UZ.zus;
+                    const healthVal = (gross - zusVal) * RULES.UZ.health;
+                    let taxVal = 0;
+
+                    if (!isYoung) {
+                        const taxable = Math.max(0, gross - zusVal - (useTaxFree ? RULES.UZ.taxFree / 12 : 0));
+                        taxVal = taxable * RULES.UZ.tax;
+                    }
+
+                    net = gross - zusVal - healthVal - taxVal;
+                    cost = gross * (1 + RULES.UZ.employerZus);
+                    taxes = gross - net;
+                }
+                else if (form.type === 'UOD') {
+                    const costOfInc = gross * RULES.UOD.costOfIncome;
+                    const taxable = gross - costOfInc;
+                    const taxVal = taxable * RULES.UOD.tax;
+
+                    net = gross - taxVal;
+                    cost = gross;
+                    taxes = taxVal;
+                }
+                else if (form.type === 'B2B') {
+                    const zusVal = RULES.B2B.zus;
+                    const healthVal = RULES.B2B.health;
+                    const taxVal = (gross - zusVal) * RULES.B2B.tax;
+
+                    net = gross - zusVal - healthVal - taxVal;
+                    cost = gross;
+                    taxes = zusVal + healthVal + taxVal;
+                }
+
+                const netHourly = net / hours;
+
+                data.push({
+                    name: form.name,
+                    net: net,
+                    cost: cost,
+                    netHourly: netHourly,
+                    taxes: taxes,
+                    benefits: benefits
+                });
+
+                html += `
+                    <tr class="result-row">
+                        <td>${form.name}</td>
+                        <td>
+                            <div class="amount">${formatCurrency(netHourly)}</div>
+                            <div class="sub-info">netto na godzinę</div>
+                        </td>
+                        <td>
+                            <div class="amount">${formatCurrency(cost)}</div>
+                            <div class="sub-info">całkowity koszt firmy</div>
+                        </td>
+                        <td>
+                            <div style="color: #ef4444; font-weight: 600">-${formatCurrency(taxes)}</div>
+                            <div class="sub-info">ZUS, NFZ i Podatek dochodowy</div>
+                        </td>
+                        <td>
+                            <div class="benefit-tags">
+                                ${benefits.length > 0 ?
+                        benefits.map(b => `<span class="tag tag-green">${b}</span>`).join('') :
+                        '<span class="tag tag-gray">Brak</span>'}
+                            </div>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            resultsTable.innerHTML = html;
+            updateSummary(data);
+        }
+
+        function updateSummary(data) {
+            // Best Net
+            const bestNet = data.reduce((prev, curr) => prev.net > curr.net ? prev : curr);
+            document.getElementById('bestNetValue').innerText = formatCurrency(bestNet.net);
+            document.getElementById('bestNetLabel').innerText = bestNet.name;
+
+            // Lowest Cost
+            const bestCost = data.reduce((prev, curr) => prev.cost < curr.cost ? prev : curr);
+            document.getElementById('bestCostValue').innerText = formatCurrency(bestCost.cost);
+            document.getElementById('bestCostLabel').innerText = bestCost.name;
+
+            // Best Benefits (simple count)
+            const bestBen = data.reduce((prev, curr) => prev.benefits.length > curr.benefits.length ? prev : curr);
+            document.getElementById('bestBenefitsValue').innerText = bestBen.benefits.length + "/3";
+            document.getElementById('bestBenefitsLabel').innerText = bestBen.name;
+        }
+
+        // Listeners
+        [grossInput, hoursInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+        [taxFreeCheck, youngPersonCheck].forEach(el => {
+            el.addEventListener('change', calculate);
+        });
+
+        document.querySelectorAll('.presets .preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.presets .preset-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                grossInput.value = btn.dataset.value;
+                calculate();
+            });
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            grossInput.value = 5000;
+            hoursInput.value = 168;
+            taxFreeCheck.checked = true;
+            youngPersonCheck.checked = false;
+            document.querySelector('.presets .preset-btn.active').classList.remove('active');
+            document.querySelector('.presets [data-value="5000"]').classList.add('active');
+            calculate();
+        });
+
+        // Initial run
+        calculate();
+    </script>
+</body>
+
+</html>

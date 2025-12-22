@@ -1,0 +1,21 @@
+{
+  "name": "zatrudnienie-polska-2006",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "npx playwright test",
+    "build": "echo 'No build step needed for static files' && exit 0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "playwright": "^1.57.0",
+    "serve": "^14.2.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
