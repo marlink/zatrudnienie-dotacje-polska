@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - zatrudnienie polska 2006</title>
+    <meta name="description"
+        content="Skontaktuj się z nami. Odpowiemy na pytania o kalkulator wynagrodzeń, dotacje i formy zatrudnienia w Polsce.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container flex justify-between items-center">
+            <div class="logo flex items-center space-x-3">
+                <div class="btn-primary"
+                    style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="text-xl font-bold">zatrudnienie<span style="color:var(--primary-500)">polska</span>
+                    2006</span>
+            </div>
+            <ul class="nav-links md:flex space-x-8">
+                <li><a href="index.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="home" style="width:18px"></i> Strona główna</a></li>
+                <li><a href="index.html#kalkulator"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="layout-grid" style="width:18px"></i> Kalkulator</a></li>
+                <li><a href="dotacje.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="briefcase" style="width:18px"></i> Dotacje</a></li>
+                <li><a href="index.html#key-info"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="info" style="width:18px"></i> Informacje</a></li>
+            </ul>
+            <button class="btn btn-primary btn-md" onclick="window.location.href='kontakt.html'">Kontakt</button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="badge animate-fade-in"
+                style="background-color: var(--primary-900); color: var(--primary-300); padding: 0.5rem 1rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                <span
+                    style="width: 8px; height: 8px; background-color: var(--primary-500); border-radius: 50%; box-shadow: 0 0 10px var(--primary-500);"></span>
+                Jesteśmy do Twojej dyspozycji
+            </div>
+            <h1 class="animate-fade-in mb-4" style="font-size: 5xl;">Skontaktuj się z nami</h1>
+            <p class="animate-fade-in text-lg mb-6" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+                Masz pytania? Chętnie pomożemy! Nasz zespół ekspertów jest gotowy odpowiedzieć na Twoje zapytania
+                dotyczące rynku pracy i dotacji.</p>
+        </div>
+    </section>
+
+    <main class="container py-16">
+        <div class="grid md:grid-cols-2 gap-12 animate-fade-in" style="animation-delay: 0.4s">
+            <div class="card card-default p-8">
+                <h2 class="text-2xl mb-8">Wyślij wiadomość</h2>
+                <form id="contactForm">
+                    <div class="input-container mb-6">
+                        <label for="name" class="label">Imię i nazwisko *</label>
+                        <input type="text" id="name" name="name" class="input" required placeholder="np. Jan Kowalski">
+                    </div>
+
+                    <div class="input-container mb-6">
+                        <label for="email" class="label">Adres e-mail *</label>
+                        <input type="email" id="email" name="email" class="input" required
+                            placeholder="np. jan@przyklad.pl">
+                    </div>
+
+                    <div class="input-container mb-6">
+                        <label for="subject" class="label">Temat zapytania *</label>
+                        <div class="select-wrapper">
+                            <select id="subject" name="subject" class="select" required>
+                                <option value="">Wybierz temat...</option>
+                                <option value="kalkulator">Pytanie o kalkulator</option>
+                                <option value="dotacje">Informacje o dotacjach</option>
+                                <option value="wspolpraca">Współpraca</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                            <div class="select-icon">
+                                <i data-lucide="chevron-down" style="width: 18px; height: 18px;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-container mb-8">
+                        <label for="message" class="label">Wiadomość *</label>
+                        <textarea id="message" name="message" class="input" required style="min-height: 150px;"
+                            placeholder="Opisz swoją sprawę..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-full">
+                        Wyślij wiadomość
+                    </button>
+                </form>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <div class="card card-default p-8">
+                    <h3 class="text-xl mb-6 flex items-center gap-3">
+                        <i data-lucide="mail" class="text-primary-400"></i>
+                        Informacje kontaktowe
+                    </h3>
+
+                    <div class="flex flex-col gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-primary-900/30 text-primary-400">
+                                <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white mb-1">E-mail</h4>
+                                <p class="text-sm text-neutral-400">kontakt@zatrudnienie-polska.pl</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-primary-900/30 text-primary-400">
+                                <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white mb-1">Telefon</h4>
+                                <p class="text-sm text-neutral-400">+48 123 456 789</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-primary-900/30 text-primary-400">
+                                <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-white mb-1">Godziny pracy</h4>
+                                <p class="text-sm text-neutral-400">Pon-Pt: 9:00 - 17:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-default p-8">
+                    <h3 class="text-xl mb-4 flex items-center gap-3">
+                        <i data-lucide="help-circle" class="text-primary-400"></i>
+                        Często zadawane pytania
+                    </h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">
+                        Zanim się z nami skontaktujesz, sprawdź <a href="index.html#key-info"
+                            class="text-primary-400 underline hover:text-primary-300 transition-colors">sekcję
+                            informacyjną</a> oraz nasz <a href="dane-podatkowe.html"
+                            class="text-primary-400 underline hover:text-primary-300 transition-colors">przewodnik po
+                            danych podatkowych</a>. Być może znajdziesz tam odpowiedź na swoje pytanie!
+                    </p>
+                </div>
+
+                <div class="card card-default p-8">
+                    <h3 class="text-xl mb-4 flex items-center gap-3">
+                        <i data-lucide="shield-check" class="text-success"></i>
+                        Bezpieczeństwo danych
+                    </h3>
+                    <p class="text-sm text-neutral-400 leading-relaxed">
+                        Twoje dane są u nas bezpieczne. Przetwarzamy je zgodnie z RODO i wykorzystujemy wyłącznie w celu
+                        odpowiedzi na Twoje zapytanie. Więcej informacji znajdziesz w naszej <a
+                            href="polityka-prywatnosci.html"
+                            class="text-primary-400 underline hover:text-primary-300 transition-colors">Polityce
+                            Prywatności</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-950 pt-16 pb-8 border-t border-neutral-800">
+        <div class="container grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="logo flex items-center space-x-3 mb-6">
+                    <div class="btn-primary"
+                        style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span class="text-xl font-bold">zatrudnienie<span
+                            style="color:var(--primary-500)">polska</span></span>
+                </div>
+                <p class="text-neutral-400 text-sm leading-relaxed">Niezależny portal dostarczający najdokładniejsze
+                    dane o rynku pracy w Polsce. Nasza misja to transparentność płac i pomoc w podejmowaniu świadomych
+                    decyzji zawodowych.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Menu</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="index.html" class="text-neutral-400 hover:text-white text-sm transition-all">Poznaj
+                            rynek</a></li>
+                    <li><a href="index.html#kalkulator"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kalkulator</a></li>
+                    <li><a href="dotacje.html" class="text-neutral-400 hover:text-white text-sm transition-all">Dotacje
+                            2025</a></li>
+                    <li><a href="index.html#key-info"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Informacje</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Legal</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="polityka-prywatnosci.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Polityka prywatności</a>
+                    </li>
+                    <li><a href="regulamin.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Regulamin</a></li>
+                    <li><a href="dane-podatkowe.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Dane podatkowe</a></li>
+                    <li><a href="kontakt.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-16 pt-8 border-t border-neutral-900 text-center">
+            <p class="text-neutral-500 text-xs mt-2">&copy; 2025 zatrudnienie polska 2006. Wszelkie prawa zastrzeżone.
+                Projektowany dla profesjonalistów.</p>
+            <div class="text-neutral-600 text-[10px] mt-2 opacity-50 uppercase tracking-widest">Powered by Design System
+                v1.0.0</div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        try {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        } catch (e) {
+            console.warn('Lucide icons failed to load:', e);
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            // In a real application, you would send this data to a backend
+            // For now, we'll just show a confirmation message
+            alert('Dziękujemy za wiadomość, ' + name + '!\n\nOdpowiemy najszybciej jak to możliwe na adres: ' + email);
+
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

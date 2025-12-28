@@ -4,13 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zatrudnienie polska 2006 - Zaawansowany Kalkulator</title>
+    <title>zatrudnienie polska 2006 - Zaawansowany Kalkulator Wynagrodzeń</title>
+    <meta name="description"
+        content="Porównaj koszty zatrudnienia w Polsce 2025. Kalkulator UoP, UZ, UOD, B2B z aktualnymi stawkami podatków i ZUS. Optymalizuj wynagrodzenie netto.">
+    <meta name="keywords"
+        content="kalkulator wynagrodzeń, zatrudnienie polska, podatki 2025, ZUS, umowa o pracę, B2B, kalkulator netto brutto">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zatrudnienie-dotacje.pl/">
+    <meta property="og:title" content="Kalkulator Wynagrodzeń 2025 - zatrudnienie polska">
+    <meta property="og:description"
+        content="Porównaj rzeczywiste koszty zatrudnienia dla UoP, UZ, UOD i B2B. Aktualne stawki podatków i składek ZUS na 2025 rok.">
+    <meta property="og:locale" content="pl_PL">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zatrudnienie-dotacje.pl/">
+    <meta property="twitter:title" content="Kalkulator Wynagrodzeń 2025 - zatrudnienie polska">
+    <meta property="twitter:description"
+        content="Porównaj rzeczywiste koszty zatrudnienia dla UoP, UZ, UOD i B2B. Aktualne stawki podatków i składek ZUS.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Icons -->
@@ -19,271 +41,293 @@
     <link rel="stylesheet" href="index.css">
     <style>
         /* Specific page overrides/additions */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        h1,
-        h2,
-        h3,
-        .logo {
-            font-family: 'Outfit', sans-serif;
-        }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav class="glass">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <i data-lucide="calculator"></i>
-                    </div>
-                    <span>zatrudnienie<span style="color:var(--primary)">polska</span> 2006</span>
+    <header class="navbar">
+        <div class="container flex justify-between items-center">
+            <div class="logo flex items-center space-x-3">
+                <div class="btn-primary"
+                    style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
                 </div>
-                <ul class="nav-links">
-                    <li class="nav-link"><a href="#"><i data-lucide="home"></i> Strona główna</a></li>
-                    <li class="nav-link active"><a href="#"><i data-lucide="layout-grid"></i> Kalkulator</a></li>
-                    <li class="nav-link"><a href="#"><i data-lucide="briefcase"></i> Dotacje</a></li>
-                    <li class="nav-link"><a href="#"><i data-lucide="info"></i> Informacje</a></li>
-                </ul>
-                <button class="preset-btn active"
-                    style="padding: 0.75rem 1.5rem; background: var(--secondary); color: white;">Kontakt</button>
-            </nav>
+                <span class="text-xl font-bold">zatrudnienie<span style="color:var(--primary-500)">polska</span>
+                    2006</span>
+            </div>
+            <ul class="nav-links md:flex space-x-8">
+                <li><a href="index.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="home" style="width:18px"></i> Strona główna</a></li>
+                <li><a href="index.html#kalkulator" class="text-white font-medium flex items-center gap-2"><i
+                            data-lucide="layout-grid" style="width:18px"></i> Kalkulator</a></li>
+                <li><a href="dotacje.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="briefcase" style="width:18px"></i> Dotacje</a></li>
+                <li><a href="index.html#key-info"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="info" style="width:18px"></i> Informacje</a></li>
+            </ul>
+            <button class="btn btn-primary btn-md" onclick="window.location.href='kontakt.html'">Kontakt</button>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
-            <div class="badge animate-fade-in" style="animation-delay: 0.1s">
-                <span class="badge-dot"></span> Aktualne na 2025 rok
+            <div class="badge animate-fade-in"
+                style="background-color: var(--primary-900); color: var(--primary-300); padding: 0.5rem 1rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                <span
+                    style="width: 8px; height: 8px; background-color: var(--primary-500); border-radius: 50%; box-shadow: 0 0 10px var(--primary-500);"></span>
+                Aktualne na 2025 rok
             </div>
-            <h1 class="animate-fade-in" style="animation-delay: 0.2s">Twoje finanse pod kontrolą.</h1>
-            <p class="animate-fade-in" style="animation-delay: 0.3s">Zaawansowany kalkulator form zatrudnienia. Porównaj
-                koszty, podatki i profity w czasie rzeczywistym.</p>
+            <h1 class="animate-fade-in mb-4" style="font-size: 5xl;">Kompleksowy przewodnik<br>zatrudnienia: podatki i
+                ZUS</h1>
+            <p class="animate-fade-in text-lg mb-6" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+                Zaawansowany kalkulator form zatrudnienia. Porównaj koszty, podatki i profity w czasie rzeczywistym.</p>
 
-            <div class="hero-cards">
-                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.4s">
-                    <i data-lucide="layers"></i>
-                    <h3>4 Formy</h3>
-                    <p style="font-size: 0.85rem">UoP, UZ, UOD, B2B</p>
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="card card-gradient p-6 animate-fade-in" style="animation-delay: 0.4s">
+                    <i data-lucide="layers" class="mb-4"
+                        style="color: var(--primary-400); width: 32px; height: 32px;"></i>
+                    <h3 class="text-xl mb-2">4 Formy</h3>
+                    <p class="text-sm">UoP, UZ, UOD, B2B</p>
                 </div>
-                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.5s">
-                    <i data-lucide="trending-up"></i>
-                    <h3>Optymalizacja</h3>
-                    <p style="font-size: 0.85rem">Najlepsza stawka netto</p>
+                <div class="card card-gradient p-6 animate-fade-in" style="animation-delay: 0.5s">
+                    <i data-lucide="trending-up" class="mb-4"
+                        style="color: var(--primary-400); width: 32px; height: 32px;"></i>
+                    <h3 class="text-xl mb-2">Optymalizacja</h3>
+                    <p class="text-sm">Najlepsza stawka netto</p>
                 </div>
-                <div class="hero-card glass-dark animate-fade-in" style="animation-delay: 0.6s">
-                    <i data-lucide="shield-check"></i>
-                    <h3>Bezpieczeństwo</h3>
-                    <p style="font-size: 0.85rem">Zgodność z przepisami</p>
+                <div class="card card-gradient p-6 animate-fade-in" style="animation-delay: 0.6s">
+                    <i data-lucide="shield-check" class="mb-4"
+                        style="color: var(--primary-400); width: 32px; height: 32px;"></i>
+                    <h3 class="text-xl mb-2">Bezpieczeństwo</h3>
+                    <p class="text-sm">Zgodność z przepisami</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <main class="main-content container">
-        <div class="calc-container animate-fade-in" style="animation-delay: 0.7s">
-            <div class="calc-header">
-                <div class="calc-title">
-                    <h2>Kalkulator Wynagrodzeń</h2>
-                    <p>Porównaj rzeczywiste koszty i zarobki dla różnych umów.</p>
-                </div>
-                <div style="display: flex; gap: 0.5rem">
-                    <button class="preset-btn" id="resetBtn"><i data-lucide="rotate-ccw"
-                            style="width:14px; height:14px; margin-right:4px"></i> Resetuj</button>
-                    <button class="preset-btn"
-                        style="background:var(--primary); border-color:var(--primary); color:white"><i
-                            data-lucide="download" style="width:14px; height:14px; margin-right:4px"></i> Eksportuj
-                        PDF</button>
-                </div>
-            </div>
-
-            <div class="input-grid">
-                <div class="input-field">
-                    <label for="grossInput">Wynagrodzenie brutto (m-c)</label>
-                    <div class="input-wrapper">
-                        <input type="number" id="grossInput" value="5000" placeholder="0.00">
-                        <span class="currency-symbol">PLN</span>
+    <main id="kalkulator" class="container py-12">
+        <div class="calc-grid">
+            <!-- Left Column: Calculator -->
+            <div class="card card-default p-8 animate-fade-in" style="animation-delay: 0.7s">
+                <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
+                    <div>
+                        <h2 class="text-2xl mb-2">Kalkulator Wynagrodzeń</h2>
+                        <p class="text-neutral-400">Porównaj rzeczywiste koszty i zarobki dla różnych umów.</p>
                     </div>
-                    <div class="presets">
-                        <button class="preset-btn" data-value="3000">3 000 zł</button>
-                        <button class="preset-btn active" data-value="5000">5 000 zł</button>
-                        <button class="preset-btn" data-value="8000">8 000 zł</button>
-                        <button class="preset-btn" data-value="12000">12 000 zł</button>
-                        <button class="preset-btn" data-value="15000">15 000 zł</button>
-                        <button class="preset-btn" data-value="20000">20 000 zł</button>
+                    <div class="flex gap-3">
+                        <button class="btn btn-secondary btn-sm" id="resetBtn">
+                            <i data-lucide="rotate-ccw" style="width:16px; height:16px; margin-right:4px"></i> Resetuj
+                        </button>
+                        <button class="btn btn-primary btn-sm">
+                            <i data-lucide="download" style="width:16px; height:16px; margin-right:4px"></i> Eksportuj
+                            PDF
+                        </button>
                     </div>
                 </div>
-                <div class="input-field">
-                    <label for="hoursInput">Wymiar godzin</label>
-                    <select id="hoursInput">
-                        <option value="168">Pełny etat (168h/mc)</option>
-                        <option value="147">Średnia (147h/mc)</option>
-                        <option value="84">1/2 etatu (84h/mc)</option>
-                        <option value="42">1/4 etatu (42h/mc)</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="options-bar">
-                <div class="switch-group">
-                    <label class="switch">
-                        <input type="checkbox" id="taxFreeCheck" checked>
-                        <span class="slider"></span>
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="flex flex-col gap-4">
+                        <label class="label" for="grossInput">Wynagrodzenie brutto (m-c)</label>
+                        <div style="position: relative;">
+                            <input type="number" id="grossInput" value="5000" class="input"
+                                placeholder="Wprowadź kwotę">
+                            <span
+                                style="position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-weight: 600; color: var(--neutral-500);">PLN</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 presets">
+                            <button class="btn btn-secondary btn-sm px-4 preset-btn" data-value="3000">3 000 zł</button>
+                            <button class="btn btn-primary btn-sm px-4 preset-btn active" data-value="5000">5 000
+                                zł</button>
+                            <button class="btn btn-secondary btn-sm px-4 preset-btn" data-value="8000">8 000 zł</button>
+                            <button class="btn btn-secondary btn-sm px-4 preset-btn" data-value="12000">12 000
+                                zł</button>
+                            <button class="btn btn-secondary btn-sm px-4 preset-btn" data-value="15000">15 000
+                                zł</button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <label class="label" for="hoursInput">Wymiar godzin</label>
+                        <div class="select-wrapper">
+                            <select id="hoursInput" class="select">
+                                <option value="168">Pełny etat (168h/mc)</option>
+                                <option value="147">Średnia (147h/mc)</option>
+                                <option value="84">1/2 etatu (84h/mc)</option>
+                                <option value="42">1/4 etatu (42h/mc)</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="select-icon" style="width: 20px;"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-bordered p-4 mb-8 flex flex-col md:flex-row justify-between gap-6">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="taxFreeCheck" checked class="checkbox">
+                        <span class="text-sm font-medium">Uwzględnij kwotę wolną od podatku</span>
                     </label>
-                    <span style="font-weight:600; font-size: 0.9rem">Uwzględnij kwotę wolną od podatku</span>
-                </div>
-                <div class="switch-group">
-                    <label class="switch">
-                        <input type="checkbox" id="youngPersonCheck">
-                        <span class="slider"></span>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="youngPersonCheck" class="checkbox">
+                        <span class="text-sm font-medium">Osoba poniżej 26 roku życia</span>
                     </label>
-                    <span style="font-weight:600; font-size: 0.9rem">Osoba poniżej 26 roku życia</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th class="th">Forma zatrudnienia</th>
+                                <th class="th">Stawka Netto /h</th>
+                                <th class="th">Koszt Pracodawcy</th>
+                                <th class="th">Podatki i Składki</th>
+                                <th class="th">Benefity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsTable" class="tbody">
+                            <!-- Content generated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="card card-gradient p-6">
+                        <h4 class="text-sm text-neutral-400 mb-2">Najwyższa stawka netto</h4>
+                        <div class="text-2xl font-bold mb-1" id="bestNetValue">0 zł</div>
+                        <div class="text-sm text-primary-400 font-medium" id="bestNetLabel">-</div>
+                    </div>
+                    <div class="card card-gradient p-6">
+                        <h4 class="text-sm text-neutral-400 mb-2">Najniższy koszt pracodawcy</h4>
+                        <div class="text-2xl font-bold mb-1" id="bestCostValue">0 zł</div>
+                        <div class="text-sm text-primary-400 font-medium" id="bestCostLabel">-</div>
+                    </div>
+                    <div class="card card-gradient p-6">
+                        <h4 class="text-sm text-neutral-400 mb-2">Najlepsze benefity</h4>
+                        <div class="text-2xl font-bold mb-1" id="bestBenefitsValue">0/4</div>
+                        <div class="text-sm text-primary-400 font-medium" id="bestBenefitsLabel">-</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Forma zatrudnienia</th>
-                            <th>Stawka Netto /h</th>
-                            <th>Koszt Pracodawcy</th>
-                            <th>Podatki i Składki</th>
-                            <th>Benefity</th>
-                        </tr>
-                    </thead>
-                    <tbody id="resultsTable">
-                        <!-- Content generated by JS -->
-                    </tbody>
-                </table>
-            </div>
+            <!-- Right Column: Key Information -->
+            <section id="key-info" class="flex flex-col gap-6 animate-fade-in" style="animation-delay: 0.8s">
+                <div class="mb-4">
+                    <h2 class="text-2xl mb-2">Kluczowe informacje</h2>
+                    <p class="text-neutral-400">Poznaj różnice między formami zatrudnienia w 2025.</p>
+                </div>
 
-            <div class="summary-grid">
-                <div class="summary-card">
-                    <h3>Najwyższa stawka netto</h3>
-                    <div class="value" id="bestNetValue">0 zł</div>
-                    <div class="label" id="bestNetLabel">-</div>
+                <div class="card card-default card-hover p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-lg bg-primary-900/30 text-primary-400">
+                            <i data-lucide="briefcase"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Umowa o pracę</h3>
+                    </div>
+                    <p class="text-sm text-neutral-400 mb-4">Najwyższy poziom ochrony prawnej i benefitów. Idealna dla
+                        długoterminowej współpracy i stabilności.</p>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--success)"></i> Pełny pakiet ZUS</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--success)"></i> Płatny urlop i chorobowe</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--success)"></i> Ochrona przed zwolnieniem</li>
+                    </ul>
                 </div>
-                <div class="summary-card">
-                    <h3>Najniższy koszt pracodawcy</h3>
-                    <div class="value" id="bestCostValue">0 zł</div>
-                    <div class="label" id="bestCostLabel">-</div>
+
+                <div class="card card-default card-hover p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-lg bg-accent-cyan/10 text-accent-cyan">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Umowa zlecenie</h3>
+                    </div>
+                    <p class="text-sm text-neutral-400 mb-4">Elastyczność z zachowaniem podstawowych zabezpieczeń
+                        społecznych. Popularna wśród studentów.</p>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--accent-cyan)"></i> Elastyczne godziny pracy</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--accent-cyan)"></i> ZUS jak przy etacie (częściowo)</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--accent-cyan)"></i> Brak sztywnej ochrony KP</li>
+                    </ul>
                 </div>
-                <div class="summary-card">
-                    <h3>Najlepsze benefity</h3>
-                    <div class="value" id="bestBenefitsValue">0/4</div>
-                    <div class="label" id="bestBenefitsLabel">-</div>
+
+                <div class="card card-default card-hover p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 rounded-lg bg-warning/10 text-warning">
+                            <i data-lucide="building-2"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">B2B (Działalność)</h3>
+                    </div>
+                    <p class="text-sm text-neutral-400 mb-4">Najwyższa stawka netto, ale wymagana własna działalność
+                        gospodarcza i samodzielne rozliczenia.</p>
+                    <ul class="flex flex-col gap-2">
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--warning)"></i> Ulgi ZUS dla nowych firm</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--warning)"></i> Pełna elastyczność i koszty</li>
+                        <li class="flex items-center gap-2 text-xs text-neutral-300"><i data-lucide="check-circle"
+                                style="width:14px; color:var(--warning)"></i> Wyższe zarobki netto</li>
+                    </ul>
                 </div>
-            </div>
+            </section>
         </div>
-
-        <section id="key-info" class="animate-fade-in" style="animation-delay: 0.8s">
-            <div style="text-align: center; margin-bottom: 3rem">
-                <h2 style="font-size: 2.25rem; color: var(--secondary)">Kluczowe informacje</h2>
-                <p style="color: var(--text-muted)">Poznaj różnice między formami zatrudnienia w 2025.</p>
-            </div>
-
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem">
-                <div class="hero-card glass"
-                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
-                    <div
-                        style="width: 48px; height: 48px; background: #dcfce7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
-                        <i data-lucide="briefcase" style="color: var(--primary); margin-bottom: 0"></i>
-                    </div>
-                    <h3 style="margin-bottom: 1rem">Umowa o pracę</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Najwyższy poziom
-                        ochrony prawnej i benefitów. Idealna dla długoterminowej współpracy i stabilności.</p>
-                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--primary)"></i> Pełny pakiet ZUS</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--primary)"></i> Płatny urlop i chorobowe</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--primary)"></i> Ochrona przed zwolnieniem</li>
-                    </ul>
-                </div>
-                <div class="hero-card glass"
-                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
-                    <div
-                        style="width: 48px; height: 48px; background: #eff6ff; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
-                        <i data-lucide="file-text" style="color: #2563eb; margin-bottom: 0"></i>
-                    </div>
-                    <h3 style="margin-bottom: 1rem">Umowa zlecenie</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Elastyczność z
-                        zachowaniem podstawowych zabezpieczeń społecznych. Popularna wśród studentów.</p>
-                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:#2563eb"></i> Elastyczne godziny pracy</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:#2563eb"></i> ZUS jak przy etacie (częściowo)</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:#2563eb"></i> Brak sztywnej ochrony KP</li>
-                    </ul>
-                </div>
-                <div class="hero-card glass"
-                    style="text-align: left; color: var(--text-main); border: 1px solid var(--border)">
-                    <div
-                        style="width: 48px; height: 48px; background: #fef3c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem">
-                        <i data-lucide="building-2" style="color: var(--accent); margin-bottom: 0"></i>
-                    </div>
-                    <h3 style="margin-bottom: 1rem">B2B (Działalność)</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem">Najwyższa stawka
-                        netto, ale wymagana własna działalność gospodarcza i samodzielne rozliczenia.</p>
-                    <ul style="list-style: none; font-size: 0.85rem; color: var(--text-muted)">
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--accent)"></i> Ulgi ZUS dla nowych firm</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--accent)"></i> Pełna elastyczność i koszty</li>
-                        <li style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem"><i data-lucide="check-circle"
-                                style="width:16px; color:var(--accent)"></i> Wyższe zarobki netto</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-about">
-                <div class="logo" style="color: white; margin-bottom: 1.5rem">
-                    <div class="logo-icon">
-                        <i data-lucide="calculator"></i>
+    <footer class="bg-neutral-950 pt-16 pb-8 border-t border-neutral-800">
+        <div class="container grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="logo flex items-center space-x-3 mb-6">
+                    <div class="btn-primary"
+                        style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
                     </div>
-                    <span>zatrudnienie<span style="color:var(--primary)">polska</span></span>
+                    <span class="text-xl font-bold">zatrudnienie<span
+                            style="color:var(--primary-500)">polska</span></span>
                 </div>
-                <p>Niezależny portal dostarczający najdokładniejsze dane o rynku pracy w Polsce. Nasza misja to
-                    transparentność płac i pomoc w podejmowaniu świadomych decyzji zawodowych.</p>
+                <p class="text-neutral-400 text-sm leading-relaxed">Niezależny portal dostarczający najdokładniejsze
+                    dane o rynku pracy w Polsce. Nasza misja to transparentność płac i pomoc w podejmowaniu świadomych
+                    decyzji zawodowych.</p>
             </div>
-            <div class="footer-links">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href="#">Poznaj rynek</a></li>
-                    <li><a href="#">Kalkulator</a></li>
-                    <li><a href="#">Dotacje 2025</a></li>
-                    <li><a href="#">Wiadomości</a></li>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Menu</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="index.html" class="text-neutral-400 hover:text-white text-sm transition-all">Poznaj
+                            rynek</a></li>
+                    <li><a href="index.html#kalkulator"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kalkulator</a></li>
+                    <li><a href="dotacje.html" class="text-neutral-400 hover:text-white text-sm transition-all">Dotacje
+                            2025</a></li>
+                    <li><a href="index.html#key-info"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Informacje</a></li>
                 </ul>
             </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Polityka prywatności</a></li>
-                    <li><a href="#">Regulamin</a></li>
-                    <li><a href="#">Dane podatkowe</a></li>
-                    <li><a href="#">Kontakt</a></li>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Legal</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="polityka-prywatnosci.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Polityka prywatności</a>
+                    </li>
+                    <li><a href="regulamin.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Regulamin</a></li>
+                    <li><a href="dane-podatkowe.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Dane podatkowe</a></li>
+                    <li><a href="kontakt.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kontakt</a></li>
                 </ul>
             </div>
         </div>
-        <div class="container"
-            style="border-top: 1px solid #1e293b; margin-top: 4rem; padding-top: 2rem; text-align: center; color: #64748b; font-size: 0.85rem">
-            &copy; 2025 zatrudnienie polska 2006. Wszelkie prawa zastrzeżone. Projektowany dla profesjonalistów.
-            <div style="font-size: 0.65rem; margin-top: 0.5rem; opacity: 0.6;">2026 Copyright by Design System v0.1.2
-            </div>
+        <div class="container mt-16 pt-8 border-t border-neutral-900 text-center">
+            <p class="text-neutral-500 text-xs mt-2">&copy; 2025 zatrudnienie polska 2006. Wszelkie prawa zastrzeżone.
+                Projektowany dla profesjonalistów.</p>
+            <div class="text-neutral-600 text-[10px] mt-2 opacity-50 uppercase tracking-widest">Powered by Design System
+                v1.0.0</div>
         </div>
     </footer>
+
 
     <script>
         // Init Lucide Icons (wrapped in try-catch for test environments)
@@ -435,11 +479,11 @@
                             <div class="sub-info">ZUS, NFZ i Podatek dochodowy</div>
                         </td>
                         <td>
-                            <div class="benefit-tags">
-                                ${benefits.length > 0 ?
-                        benefits.map(b => `<span class="tag tag-green">${b}</span>`).join('') :
-                        '<span class="tag tag-gray">Brak</span>'}
-                            </div>
+                             <div class="benefit-tags">
+                                 ${benefits.length > 0 ?
+                        benefits.map(b => `<span class="badge badge-success">${b}</span>`).join('') :
+                        '<span class="badge" style="background: rgba(115, 115, 115, 0.1); color: var(--neutral-400)">Brak</span>'}
+                             </div>
                         </td>
                     </tr>
                 `;

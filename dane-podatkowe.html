@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dane Podatkowe 2025 - zatrudnienie polska 2006</title>
+    <meta name="description"
+        content="Aktualne stawki podatkowe, składki ZUS i kwoty wolne od podatku na 2025 rok. Kompletny przewodnik po danych podatkowych w Polsce.">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container flex justify-between items-center">
+            <div class="logo flex items-center space-x-3">
+                <div class="btn-primary"
+                    style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                    <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
+                </div>
+                <span class="text-xl font-bold">zatrudnienie<span style="color:var(--primary-500)">polska</span>
+                    2006</span>
+            </div>
+            <ul class="nav-links md:flex space-x-8">
+                <li><a href="index.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="home" style="width:18px"></i> Strona główna</a></li>
+                <li><a href="index.html#kalkulator"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="layout-grid" style="width:18px"></i> Kalkulator</a></li>
+                <li><a href="dotacje.html"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="briefcase" style="width:18px"></i> Dotacje</a></li>
+                <li><a href="index.html#key-info"
+                        class="text-neutral-300 hover:text-white transition-all flex items-center gap-2"><i
+                            data-lucide="info" style="width:18px"></i> Informacje</a></li>
+            </ul>
+            <button class="btn btn-primary btn-md" onclick="window.location.href='kontakt.html'">Kontakt</button>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="badge animate-fade-in"
+                style="background-color: var(--primary-900); color: var(--primary-300); padding: 0.5rem 1rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 2rem;">
+                <span
+                    style="width: 8px; height: 8px; background-color: var(--primary-500); border-radius: 50%; box-shadow: 0 0 10px var(--primary-500);"></span>
+                Aktualne na 2025 rok
+            </div>
+            <h1 class="animate-fade-in mb-4" style="font-size: 5xl;">Dane Podatkowe 2025</h1>
+            <p class="animate-fade-in text-lg mb-6" style="max-width: 40rem; margin-left: auto; margin-right: auto;">
+                Kompletny przewodnik po stawkach podatkowych, składkach ZUS i kwotach wolnych od podatku w Polsce.</p>
+        </div>
+    </section>
+
+    <main class="container py-16">
+        <div class="flex flex-col gap-12 animate-fade-in" style="animation-delay: 0.4s">
+
+            <div class="card card-default p-8">
+                <h2 class="text-2xl text-white mb-6">Podatek dochodowy od osób fizycznych (PIT)</h2>
+                <p class="text-neutral-400 mb-8 leading-relaxed">
+                    W 2025 roku obowiązuje uproszczona skala podatkowa z dwoma progami. Kwota wolna od podatku wynosi 30
+                    000 zł rocznie.
+                </p>
+
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th class="th">Podstawa obliczenia podatku (rocznie)</th>
+                                <th class="th">Stawka podatku</th>
+                                <th class="th">Kwota zmniejszająca podatek</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="tr-hover">
+                                <td class="td">Do 120 000 zł</td>
+                                <td class="td"><span class="badge badge-success">12%</span></td>
+                                <td class="td">3 600 zł (kwota wolna 30 000 zł)</td>
+                            </tr>
+                            <tr class="tr-hover">
+                                <td class="td">Powyżej 120 000 zł</td>
+                                <td class="td"><span class="badge badge-error">32%</span></td>
+                                <td class="td">3 600 zł + 20% od nadwyżki ponad 120 000 zł</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card card-gradient mt-8 p-6 border-none">
+                    <h3 class="text-xl text-white mb-3">Kwota wolna od podatku</h3>
+                    <p class="text-neutral-300 leading-relaxed">
+                        W 2025 roku każdy podatnik ma prawo do kwoty wolnej wynoszącej 30 000 zł rocznie. Oznacza to, że
+                        pierwsze 30 000 zł rocznego dochodu jest zwolnione z podatku, co realnie zwiększa wynagrodzenie
+                        netto każdego pracownika.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-default p-8">
+                <h2 class="text-2xl text-white mb-6">Składki ZUS - Umowa o pracę</h2>
+                <p class="text-neutral-400 mb-8 leading-relaxed">
+                    Składki na ubezpieczenia społeczne i zdrowotne są obowiązkowe dla wszystkich pracowników
+                    zatrudnionych na podstawie umowy o pracę.
+                </p>
+
+                <div class="table-wrapper">
+                    <table class="table">
+                        <thead class="thead">
+                            <tr>
+                                <th class="th">Składka</th>
+                                <th class="th">Pracownik</th>
+                                <th class="th">Pracodawca</th>
+                                <th class="th">Razem</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr class="tr-hover">
+                                <td class="td">Emerytalna</td>
+                                <td class="td">9,76%</td>
+                                <td class="td">9,76%</td>
+                                <td class="td">19,52%</td>
+                            </tr>
+                            <tr class="tr-hover">
+                                <td class="td">Rentowa</td>
+                                <td class="td">1,5%</td>
+                                <td class="td">6,5%</td>
+                                <td class="td">8,0%</td>
+                            </tr>
+                            <tr class="tr-hover">
+                                <td class="td">Chorobowa</td>
+                                <td class="td">2,45%</td>
+                                <td class="td">-</td>
+                                <td class="td">2,45%</td>
+                            </tr>
+                            <tr class="tr-hover">
+                                <td class="td">Wypadkowa</td>
+                                <td class="td">-</td>
+                                <td class="td">1,67% (średnio)</td>
+                                <td class="td">1,67%</td>
+                            </tr>
+                            <tr class="tr-hover">
+                                <td class="td">Fundusz Pracy</td>
+                                <td class="td">-</td>
+                                <td class="td">2,45%</td>
+                                <td class="td">2,45%</td>
+                            </tr>
+                            <tr class="tr-hover bg-neutral-900/50">
+                                <td class="td font-bold text-white">Razem</td>
+                                <td class="td font-bold text-white">13,71%</td>
+                                <td class="td font-bold text-white">20,38%</td>
+                                <td class="td font-bold text-white">34,09%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card card-default p-8">
+                    <h2 class="text-2xl text-white mb-6">Składka zdrowotna</h2>
+                    <p class="text-neutral-400 mb-6 leading-relaxed">
+                        Składka zdrowotna wynosi 9% podstawy wymiaru i jest płacona przez pracownika. Nie podlega
+                        odliczeniu od podatku.
+                    </p>
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <tbody class="tbody">
+                                <tr class="tr-hover">
+                                    <td class="td font-semibold">Stawka</td>
+                                    <td class="td">9%</td>
+                                </tr>
+                                <tr class="tr-hover">
+                                    <td class="td font-semibold">Podstawa (UoP)</td>
+                                    <td class="td text-xs">Wynagrodzenie po skł. ZUS</td>
+                                </tr>
+                                <tr class="tr-hover">
+                                    <td class="td font-semibold">Odliczenie</td>
+                                    <td class="td text-error text-xs">Brak возможности odliczenia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card card-default p-8">
+                    <h2 class="text-2xl text-white mb-6">Minimalne 2025</h2>
+                    <p class="text-neutral-400 mb-6 leading-relaxed">
+                        Minimalne wynagrodzenie za pracę oraz stawka godzinowa w 2025 roku:
+                    </p>
+                    <div class="table-wrapper">
+                        <table class="table">
+                            <thead class="thead">
+                                <tr>
+                                    <th class="th">Okres</th>
+                                    <th class="th">Miesięcznie</th>
+                                    <th class="th">Godz.</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody">
+                                <tr class="tr-hover">
+                                    <td class="td">I-VI 2025</td>
+                                    <td class="td font-bold">4 300 zł</td>
+                                    <td class="td">28,10 zł</td>
+                                </tr>
+                                <tr class="tr-hover">
+                                    <td class="td">VII-XII 2025</td>
+                                    <td class="td font-bold">4 666 zł</td>
+                                    <td class="td">30,50 zł</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-default p-8">
+                <h2 class="text-2xl text-white mb-6">B2B - Działalność gospodarcza</h2>
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+                        <h4 class="text-lg text-white mb-2">Skala podatkowa</h4>
+                        <div class="text-3xl font-bold text-primary-500 mb-4">12% / 32%</div>
+                        <p class="text-sm text-neutral-400">Standardowe zasady PIT, pełna kwota wolna 30k zł.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+                        <h4 class="text-lg text-white mb-2">Podatek liniowy</h4>
+                        <div class="text-3xl font-bold text-primary-500 mb-4">19%</div>
+                        <p class="text-sm text-neutral-400">Stała stawka niezależnie od dochodu, bez progów.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+                        <h4 class="text-lg text-white mb-2">Ryczałt</h4>
+                        <div class="text-3xl font-bold text-primary-500 mb-4">2% - 17%</div>
+                        <p class="text-sm text-neutral-400">Zależny od rodzaju działalności, brak kosztów.</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <i data-lucide="sparkles" style="width: 24px; height: 24px; flex-shrink: 0;"></i>
+                    <div>
+                        <h5 class="font-bold text-white mb-1">Ulga na start</h5>
+                        <p class="text-sm text-neutral-300">Nowi przedsiębiorcy mogą skorzystać z ulgi na start przez
+                            pierwsze 6 miesięcy. Zwolnienie dotyczy składek ubezpieczenia społecznego.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-bordered p-8 border-neutral-800">
+                <h2 class="text-xl text-white mb-6 flex items-center gap-3">
+                    <i data-lucide="book-open" class="text-primary-400"></i>
+                    Źródła i metodologia
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <ul class="flex flex-col gap-4">
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="check-circle" class="text-success mt-1"
+                                style="width: 18px; height: 18px;"></i>
+                            <span class="text-sm text-neutral-400">Ustawa o podatku dochodowym od osób fizycznych
+                                (PIT)</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="check-circle" class="text-success mt-1"
+                                style="width: 18px; height: 18px;"></i>
+                            <span class="text-sm text-neutral-400">Ustawa o systemie ubezpieczeń społecznych</span>
+                        </li>
+                    </ul>
+                    <ul class="flex flex-col gap-4">
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="check-circle" class="text-success mt-1"
+                                style="width: 18px; height: 18px;"></i>
+                            <span class="text-sm text-neutral-400">Rozporządzenie RM w sprawie minimalnego
+                                wynagrodzenia</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="check-circle" class="text-success mt-1"
+                                style="width: 18px; height: 18px;"></i>
+                            <span class="text-sm text-neutral-400">Oficjalne dane Ministerstwa Finansów i ZUS</span>
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="mt-8 pt-6 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-xs text-neutral-500 uppercase tracking-widest">Ostatnia aktualizacja: Styczeń 2025
+                    </p>
+                    <p class="text-[10px] text-neutral-600 italic max-w-md text-center md:text-right">Portal ma
+                        charakter informacyjny. Dane nie stanowią porady prawnej ani podatkowej.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-neutral-950 pt-16 pb-8 border-t border-neutral-800">
+        <div class="container grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="logo flex items-center space-x-3 mb-6">
+                    <div class="btn-primary"
+                        style="width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="calculator" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span class="text-xl font-bold">zatrudnienie<span
+                            style="color:var(--primary-500)">polska</span></span>
+                </div>
+                <p class="text-neutral-400 text-sm leading-relaxed">Niezależny portal dostarczający najdokładniejsze
+                    dane o rynku pracy w Polsce. Nasza misja to transparentność płac i pomoc w podejmowaniu świadomych
+                    decyzji zawodowych.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Menu</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="index.html" class="text-neutral-400 hover:text-white text-sm transition-all">Poznaj
+                            rynek</a></li>
+                    <li><a href="index.html#kalkulator"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kalkulator</a></li>
+                    <li><a href="dotacje.html" class="text-neutral-400 hover:text-white text-sm transition-all">Dotacje
+                            2025</a></li>
+                    <li><a href="index.html#key-info"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Informacje</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-6">Legal</h4>
+                <ul class="flex flex-col gap-3">
+                    <li><a href="polityka-prywatnosci.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Polityka prywatności</a>
+                    </li>
+                    <li><a href="regulamin.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Regulamin</a></li>
+                    <li><a href="dane-podatkowe.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Dane podatkowe</a></li>
+                    <li><a href="kontakt.html"
+                            class="text-neutral-400 hover:text-white text-sm transition-all">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mt-16 pt-8 border-t border-neutral-900 text-center">
+            <p class="text-neutral-500 text-xs mt-2">&copy; 2025 zatrudnienie polska 2006. Wszelkie prawa zastrzeżone.
+                Projektowany dla profesjonalistów.</p>
+            <div class="text-neutral-600 text-[10px] mt-2 opacity-50 uppercase tracking-widest">Powered by Design System
+                v1.0.0</div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        try {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        } catch (e) {
+            console.warn('Lucide icons failed to load:', e);
+        }
+    </script>
+</body>
+
+</html>
